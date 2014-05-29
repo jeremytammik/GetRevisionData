@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Command">
+    <Text>Revision Data</Text>
+    <Description>Retrieve and list sheet revision data</Description>
+    <Assembly>GetRevisionData.dll</Assembly>
+    <FullClassName>GetRevisionData.Command</FullClassName>
+    <ClientId>8dc01f77-c5fc-4590-b1b0-193e135cc8bb</ClientId>
+    <VendorId>TBC_</VendorId>
+    <VendorDescription>The Building Coder, http://thebuildingcoder.typepad.com</VendorDescription>
+  </AddIn>
+</RevitAddIns>
