@@ -94,6 +94,55 @@ namespace GetRevisionData
     }
     #endregion // Unused parameter value to display string converter
 
+    #region Dan sample code for Revit 2015
+    void f( TextWriter tw, ViewSheet oViewSheet )
+    {
+      Document doc = oViewSheet.Document;
+
+      IList<ElementId> oElemIDs = oViewSheet.GetAllRevisionIds();
+
+      if( oElemIDs.Count == 0 )
+        return;
+
+      foreach( ElementId elemID in oElemIDs )
+      {
+        Element oEl = doc.GetElement( elemID );
+
+        Revision oRev = oEl as Revision;
+
+        // Add text line to text file
+        tw.WriteLine( "Rev Category Name: " + oRev.Category.Name );
+
+        // Add text line to text file
+        tw.WriteLine( "Rev Description: " + oRev.Description );
+
+        // Add text line to text file
+        tw.WriteLine( "Rev Issued: " + oRev.Issued.ToString() );
+
+        // Add text line to text file
+        tw.WriteLine( "Rev Issued By: " + oRev.IssuedBy.ToString() );
+
+        // Add text line to text file
+        tw.WriteLine( "Rev Issued To: " + oRev.IssuedTo.ToString() );
+
+        // Add text line to text file
+        tw.WriteLine( "Rev Number Type: " + oRev.NumberType.ToString() );
+
+        // Add text line to text file
+        tw.WriteLine( "Rev Date: " + oRev.RevisionDate );
+
+        // Add text line to text file
+        tw.WriteLine( "Rev Visibility: " + oRev.Visibility.ToString() );
+
+        // Add text line to text file
+        tw.WriteLine( "Rev Sequence Number: " + oRev.SequenceNumber.ToString() );
+
+        // Add text line to text file
+        tw.WriteLine( "Rev Number: " + oRev.RevisionNumber );
+      }
+    }
+    #endregion // Dan sample code for Revit 2015
+
     /// <summary>
     /// A container for the revision data displayed in
     /// the Revit 'Sheet Issues/Revisions' dialogue.
