@@ -196,10 +196,16 @@ namespace GetRevisionData
       dg.ReadOnly = true;
       dg.TabIndex = 0;
       dg.Parent = form;
+
       dg.AutoSize = true;
       dg.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
       dg.AutoResizeColumns( DataGridViewAutoSizeColumnsMode.AllCells );
       dg.AutoResizeColumns();
+
+      //dg.Columns[2].AutoSizeMode 
+      //  = DataGridViewAutoSizeColumnMode.DisplayedCells;
+      //dg.Columns[3].AutoSizeMode 
+      //  = DataGridViewAutoSizeColumnMode.Fill;
 
       form.ShowDialog( owner );
     }
